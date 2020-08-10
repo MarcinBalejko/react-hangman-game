@@ -35,7 +35,7 @@ function App() {
     };
     window.addEventListener("keydown", handleKeydown);
 
-    // clean-up function below (cause everytime we just want one event listener running)
+    // clean-up function below (because each time we just want one EventListener running)
     return () => window.removeEventListener("keydown", handleKeydown);
   }, [correctLetters, wrongLetters, playable]);
 
