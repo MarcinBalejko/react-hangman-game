@@ -38,15 +38,11 @@ function App() {
       }
     };
     window.addEventListener("keydown", handleKeydown);
-
-    // clean-up function below
     return () => window.removeEventListener("keydown", handleKeydown);
   }, [correctLetters, wrongLetters, playable]);
 
   function playAgain() {
     setPlayable(true);
-
-    // Empty Arrays
     setCorrectLetters([]);
     setWrongLetters([]);
 
